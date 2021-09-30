@@ -1,7 +1,8 @@
 import {REMOVE_FROM_CART} from './cartRemoveType'
-function removeFromCart(){
+function removeFromCart(eachItem){
     return{
-        type:REMOVE_FROM_CART
+        type:REMOVE_FROM_CART,
+        payload:eachItem
     }
 }
 export default removeFromCart

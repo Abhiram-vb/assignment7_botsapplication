@@ -3,30 +3,9 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import addToCart from '../Redux/cartAction'
 import removeFromCart from '../Redux/cartRemoveAction'
-const data =[
-    {
-    "id":1,
-    "bot":"Hot Bot",
-    "description":"Hot bot is low volatility portfolio of growth stocks selected based on our proprietary metrics",
-    "index-value":289.34,
-    "cagr":34
-    },
-    {
-    "id":2,
-    "bot":"Cool Bot",
-    "description":"Cool bot is low volatility portfolio of growth stocks selected based on our proprietary metrics",
-    "index-value":439.34,
-    "cagr":28
-    },
-    {
-    "id":3,
-    "bot":"Options Bot",
-    "description":"Options bot is low volatility portfolio of growth stocks selected based on our proprietary metrics",
-    "index-value":139.34,
-    "cagr":42
-    }
-    ]
+import { useSelector } from 'react-redux'
 const EachBot = (props)=>{
+    const data = useSelector(state => state.data)
     const {match} = props 
     const {params} = match
     let {id} = params
@@ -54,8 +33,8 @@ const EachBot = (props)=>{
                         <Link to={`/`}>
                             <button>View alog</button>
                             </Link>
-                            <button onClick={()=>dispatch(addToCart())}>Buy</button>
-                            <button onClick={()=>dispatch(removeFromCart())}>Remove</button>
+                            <button onClick={()=>dispatch(addToCart(newData[0]))}>Buy</button>
+                            <button onClick={()=>dispatch(removeFromCart(newData[0]))}>Remove</button>
                         </div>
                     </Col>
                 </Row>

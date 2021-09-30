@@ -1,7 +1,8 @@
-import { CART_ITEMS } from "./cartType"
- function addToCart(){
+import { ADD_TO_CART } from "./cartType"
+ function addToCart(eachData){
     return{
-        type:CART_ITEMS
+        type:ADD_TO_CART,
+        payload:eachData
     }
 }
 export default addToCart

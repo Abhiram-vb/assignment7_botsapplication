@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom'
 import './index.css'
-
 import { Container,Row,Col } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import addToCart from '../Redux/cartAction'
@@ -29,8 +28,8 @@ const BotsComponent = (props) =>{
                         <Link to={`/bots-details/${eachData.id}`}>
                             <button>View alog</button>
                             </Link>
-                            <button onClick={()=>dispatch(addToCart())}>Buy</button>
-                            <button onClick={()=>dispatch(removeFromCart())}>Remove</button>
+                            <button onClick={()=>dispatch(addToCart(eachData))}>Buy</button>
+                            <button onClick={()=>dispatch(removeFromCart(eachData))}>Remove</button>
                         </div>
                     </Col>
                 </Row>
