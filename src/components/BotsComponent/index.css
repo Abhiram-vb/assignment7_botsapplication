@@ -1,0 +1,17 @@
+.row1{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mainBots{
+    width: 100vw;
+}
+button{
+    cursor: pointer;
+}
