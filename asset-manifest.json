@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/assignment7_botsapplication/static/css/main.714d7e17.chunk.css",
+    "main.css": "/assignment7_botsapplication/static/css/main.ea15038e.chunk.css",
     "main.js": "/assignment7_botsapplication/static/js/main.f5cbb99b.chunk.js",
     "main.js.map": "/assignment7_botsapplication/static/js/main.f5cbb99b.chunk.js.map",
     "runtime-main.js": "/assignment7_botsapplication/static/js/runtime-main.9de7932e.js",
@@ -10,13 +10,13 @@
     "static/js/3.ef4a3785.chunk.js": "/assignment7_botsapplication/static/js/3.ef4a3785.chunk.js",
     "static/js/3.ef4a3785.chunk.js.map": "/assignment7_botsapplication/static/js/3.ef4a3785.chunk.js.map",
     "index.html": "/assignment7_botsapplication/index.html",
-    "static/css/main.714d7e17.chunk.css.map": "/assignment7_botsapplication/static/css/main.714d7e17.chunk.css.map",
+    "static/css/main.ea15038e.chunk.css.map": "/assignment7_botsapplication/static/css/main.ea15038e.chunk.css.map",
     "static/js/2.946de8dc.chunk.js.LICENSE.txt": "/assignment7_botsapplication/static/js/2.946de8dc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9de7932e.js",
     "static/js/2.946de8dc.chunk.js",
-    "static/css/main.714d7e17.chunk.css",
+    "static/css/main.ea15038e.chunk.css",
     "static/js/main.f5cbb99b.chunk.js"
   ]
 }
