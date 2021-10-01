@@ -7,7 +7,7 @@ const NavBar = () =>{
         <div>
             <h1 className="botsWelcome">Welcome To Bots App</h1>
             <div className="cartvalue">
-            <Link to="/"><p>DashBoard</p></Link>
+            <Link to="/bots"><p>DashBoard</p></Link>
             <p className="noOfItemsInCart">No of Items In Cart: {cartValue}</p>
             <Link to="/cartItems">
                 <div className="cartImageAndText">

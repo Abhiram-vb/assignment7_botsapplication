@@ -11,7 +11,7 @@ function App() {
       <NavBar/>
 
         <Switch>
-          <Route exact path="/" component={MainComponent}/>
+          <Route exact path="/bots" component={MainComponent}/>
           <Route exact path="/bots-details/:id" component={EachBot} />
           <Route exact path="/cartItems" component={CartItems}/>
         </Switch>

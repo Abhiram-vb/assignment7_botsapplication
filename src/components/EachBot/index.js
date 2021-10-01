@@ -29,7 +29,7 @@ const EachBot = (props)=>{
                     <p className="cargPercent">{newData[0].cagr}%</p>
                 </div>
                 <div className="buttons">
-                    <Link to={`/`}>
+                    <Link to={`/bots`}>
                         <button className="viewAlgo">Back</button>
                     </Link>
                     <button className="buy" onClick={()=>dispatch(addToCart(newData[0]))}>Buy</button>
