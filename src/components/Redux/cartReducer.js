@@ -58,32 +58,31 @@ const cartReducer = (state=initialCartItems,action)=>{
             if(initialCartForRemove.length>0){
                 const isItemInCartForRemove = initialCartForRemove.filter(eachItem=>eachItem.id===action.payload.id)
                 console.log(isItemInCartForRemove.length)
-            if(isItemInCartForRemove.length>0){
-                updatedCartForRemove = initialCartForRemove
+                if(isItemInCartForRemove.length>0){
+                    updatedCartForRemove = initialCartForRemove
 
-                if(isItemInCartForRemove[0].count>1){
-                    updatedCartForRemove = initialCartForRemove.map(eachItem=>{
-                        if(eachItem.id===action.payload.id){
-                            return {...eachItem,"count":eachItem.count-1}
+                    if(isItemInCartForRemove[0].count>1){
+                        updatedCartForRemove = initialCartForRemove.map(eachItem=>{
+                            if(eachItem.id===action.payload.id){
+                                return {...eachItem,"count":eachItem.count-1}
+                            }
+                            return eachItem}
+                            )
+                        return{
+                            ...state,
+                            cartData:updatedCartForRemove,
+                            noOfCartItems:state.noOfCartItems-1
+                        } 
+                    }
+                    else{
+                        updatedCartForRemove = initialCartForRemove.filter(eachItem=>eachItem.id!==action.payload.id)
+                        return{
+                            ...state,
+                            cartData:updatedCartForRemove,
+                            noOfCartItems:state.noOfCartItems-1
                         }
-                        return eachItem}
-                        )
-                    return{
-                        ...state,
-                        cartData:updatedCartForRemove,
-                        noOfCartItems:state.noOfCartItems-1
                     } 
                 }
-                else{
-                    updatedCartForRemove = initialCartForRemove.filter(eachItem=>eachItem.id!==action.payload.id)
-                    return{
-                        ...state,
-                        cartData:updatedCartForRemove,
-                        noOfCartItems:state.noOfCartItems-1
-                    }
-                }
-                 
-            }
             else{
                 updatedCartForRemove = initialCartForRemove
                 alert("Selected Item is not in cart")
@@ -93,7 +92,7 @@ const cartReducer = (state=initialCartItems,action)=>{
                     noOfCartItems:state.noOfCartItems
                 } 
             }
-            }
+        }
             else{
                 updatedCartForRemove = initialCartForRemove
                 alert("Cart Is Empty")
