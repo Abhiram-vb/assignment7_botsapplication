@@ -35,7 +35,7 @@ const cartReducer = (state=initialCartItems,action)=>{
             const isItemInCart = initialCart.filter(eachItem=>eachItem.id===action.payload.id)
             let updatedCart = null
             if(isItemInCart.length>0){
-                 updatedCart = initialCart.map(eachItem=>{
+                updatedCart = initialCart.map(eachItem=>{
                     if(eachItem.id===action.payload.id){
                         return {...eachItem,"count":eachItem.count+1}
                     }
