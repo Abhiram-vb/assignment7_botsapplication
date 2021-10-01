@@ -1,9 +1,13 @@
-*{
-    font-family: "Roboto";
-}
-.cartvalue{
+.cartBots{
     display: flex;
     flex-direction: column;
+    width: 100vw;
     align-items: center;
     justify-content: center;
+}
+.eachCartBot{
+    width: 80vw;
+}
+.cartQuantity{
+    color: #d62828;
 }

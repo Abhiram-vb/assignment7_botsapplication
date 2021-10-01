@@ -1,0 +1,23 @@
+.cartvalue{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    flex-direction: row;
+}
+.noOfItemsInCart{
+    color: #5e60ce;
+    font-weight: 400;
+}
+.cartImage{
+    height: 55px;
+}
+.cartImageAndText{
+    display: flex;
+}
+.cartText{
+    text-decoration: none;
+}
+.botsWelcome{
+    text-align: center;
+    color:#f77f00;
+}

@@ -1,17 +1,70 @@
-.row1{
+.eachBot{
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
     border: 1px solid black;
     align-items: center;
+    margin:10px;
+    border-radius: 10px;
 }
 .buttons{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 .mainBots{
-    width: 100vw;
+    width:80vw;
 }
 button{
     cursor: pointer;
+    width: 100px;
+}
+.botName{
+    margin-right: 5px;
+    font-size: 1.5rem;
+    width: 150px;
+    flex-wrap: wrap;
+    color: #003049;
+    font-weight: 400;
+}
+.indexValue{
+    width: 150px;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+.carg{
+    width: 150px;
+    flex-wrap: wrap;
+}
+.cargHead{
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #003049;
+}
+.buy{
+    background-color: #2dc653;
+    margin:2px;
+    border-width: 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+}
+.viewAlgo{
+    background-color: #05668d;
+    margin:2px;
+    border-width: 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+}
+.remove{
+    background-color: #fd151b;
+    margin:2px;
+    border-width: 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+}
+.cargPercent{
+    color: #5e60ce;
 }

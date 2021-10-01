@@ -1,0 +1,10 @@
+.widthClass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 90vw; */
+}
+.eachBot{
+    width: 80vw;
+}

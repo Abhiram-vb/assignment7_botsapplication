@@ -1,9 +1,9 @@
-import { Container,Row,Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import addToCart from '../Redux/cartAction'
 import removeFromCart from '../Redux/cartRemoveAction'
 import { useSelector } from 'react-redux'
+import './index.css'
 const EachBot = (props)=>{
     const data = useSelector(state => state.data)
     const {match} = props 
@@ -14,32 +14,29 @@ const EachBot = (props)=>{
     const dispatch = useDispatch();
 
     return(
-    <div>
-        <Container>
-                <Row className="row1">
-                    <Col xs={4}>
-                        <h1>{newData[0].bot}</h1>
-                    </Col>
-                    <Col xs={3}>
-                            <p>Index value</p>
-                            <p>{newData[0]['index-value']}</p>
-                    </Col>
-                    <Col xs={3}>
-                            <h1>CAGR</h1>
-                            <p>{newData[0].cagr}</p>
-                    </Col>
-                    <Col xs={2}>
-                        <div className="buttons">
-                        <Link to={`/`}>
-                            <button>View alog</button>
-                            </Link>
-                            <button onClick={()=>dispatch(addToCart(newData[0]))}>Buy</button>
-                            <button onClick={()=>dispatch(removeFromCart(newData[0]))}>Remove</button>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-    </div>
+        <div className=" widthClass">
+            <div className="eachBot">
+                <div>
+                    <h1 className="botName">{newData[0].bot}</h1>
+                    <p className="cargPercent">{newData[0].description}</p>
+                </div>
+                <div className="indexValue">
+                    <p className="cargHead">Index value</p>
+                    <p className="cargPercent">{newData[0]['index-value']}</p>
+                </div>
+                <div className="carg">
+                    <h1 className="cargHead">CAGR</h1>
+                    <p className="cargPercent">{newData[0].cagr}%</p>
+                </div>
+                <div className="buttons">
+                    <Link to={`/`}>
+                        <button className="viewAlgo">Back</button>
+                    </Link>
+                    <button className="buy" onClick={()=>dispatch(addToCart(newData[0]))}>Buy</button>
+                    <button className="remove" onClick={()=>dispatch(removeFromCart(newData[0]))}>Remove</button>
+                </div>
+            </div>
+        </div>
 )}
     
 

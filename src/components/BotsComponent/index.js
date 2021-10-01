@@ -1,40 +1,34 @@
 import {Link} from 'react-router-dom'
 import './index.css'
-import { Container,Row,Col } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import addToCart from '../Redux/cartAction'
 import removeFromCart from '../Redux/cartRemoveAction'
-const BotsComponent = (props) =>{
-    const {bots} = props
+import { useSelector } from 'react-redux'
+const BotsComponent = () =>{
+    const data = useSelector(state => state.data)
     const dispatch = useDispatch();
     return(
         <div className="mainBots">
-            {bots.map(eachData=>
-                <Container>
-                <Row className="row1">
-                    <Col xs={4}>
-                        <h1>{eachData.bot}</h1>
-                    </Col>
-                    <Col xs={3}>
-                            <p>Index value</p>
-                            <p>{eachData['index-value']}</p>
-                    </Col>
-                    <Col xs={3}>
-                            <h1>CAGR</h1>
-                            <p>{eachData.cagr}</p>
-                    </Col>
-                    <Col xs={2}>
-                        <div className="buttons">
-                        <Link to={`/bots-details/${eachData.id}`}>
-                            <button>View alog</button>
-                            </Link>
-                            <button onClick={()=>dispatch(addToCart(eachData))}>Buy</button>
-                            <button onClick={()=>dispatch(removeFromCart(eachData))}>Remove</button>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>)}
-            
+            {data.map(eachData=>
+                <div className="eachBot">
+                    <h1 className="botName">{eachData.bot}</h1>
+                    <div className="indexValue">
+                        <p className="cargHead">Index value</p>
+                        <p className="cargPercent">{eachData['index-value']}</p>
+                    </div>
+                    <div className="carg">
+                        <h1 className="cargHead">CAGR</h1>
+                        <p className="cargPercent">{eachData.cagr}%</p>
+                    </div>
+                    <div className="buttons">
+                    <Link to={`/bots-details/${eachData.id}`}>
+                        <button className="viewAlgo">View algo</button>
+                        </Link>
+                        <button className="buy" onClick={()=>dispatch(addToCart(eachData))}>Buy</button>
+                        <button className="remove" onClick={()=>dispatch(removeFromCart(eachData))}>Remove</button>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
