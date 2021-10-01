@@ -21,3 +21,9 @@
     text-align: center;
     color:#f77f00;
 }
+@media (max-width:767px){
+    .cartvalue{
+        display: flex;
+        flex-direction: column;
+    }
+}
