@@ -1,4 +1,6 @@
-import {useSelector} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
+import addToCart from '../Redux/cartAction'
+import removeFromCart from '../Redux/cartRemoveAction'
 import './index.css'
 const CartItems = () =>{
     const cartData = useSelector(state => state.cartData)
@@ -6,6 +8,7 @@ const CartItems = () =>{
         <h1 className="cartQuantity">Cart Is Empty</h1>
         <img src="https://i.pinimg.com/originals/2e/ac/fa/2eacfa305d7715bdcd86bb4956209038.png" alt="cart is empty" className="cartEmptyImage"/>
                 </div>:<h1 className="cartFull">Cart</h1>
+    const dispatch = useDispatch();
     return(
         <div  className="cartBots">
             {wholeCartData}
@@ -23,6 +26,10 @@ const CartItems = () =>{
                         </div>
                         <div className="buttons">
                             <h1 className="cargHead cartQuantity">Quantity:{eachItem.count}</h1>
+                        </div>
+                        <div className="buttons">
+                            <button className="buy" onClick={()=>dispatch(addToCart(eachItem))}>Buy</button>
+                            <button className="remove" onClick={()=>dispatch(removeFromCart(eachItem))}>Remove</button>
                         </div>
                     </div>
                 </div>
